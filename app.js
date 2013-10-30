@@ -8,7 +8,7 @@ var app = express();
 
 var posts = [];
 
-dir.readFiles('posts', {
+dir.readFiles(__dirname + '/posts', {
     match: /.md$/,
     exclude: /^\./
     }, function(err, content, filename,next) {
