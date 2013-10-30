@@ -35,10 +35,6 @@ app.get('/', function(req, res){
 	res.render('index', { posts: posts });
 });
 
-app.get('/post/:name', function(req, res){
-	res.render('single', { post: posts[0]})
-});
-
 app.listen(3000);
 console.log('Listening on port 3000');
 

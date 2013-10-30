@@ -1,7 +1,7 @@
 We've Got Opinions
 ====================
 
-Working with smart people is my opinion the single
+Working with smart people is in my opinion the single
 fastest way to improve as a developer.  
 
 Smart people tend engage in intelligent debate, 
