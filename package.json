@@ -1,0 +1,13 @@
+{
+  "name": "opinionateddeveloper.com",
+  "description": "Playing with a markdown based blog concept",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "marked": ">= 0.0.0",
+    "ejs": ">= 0.0.0",
+    "ejs-locals": ">= 0.0.0",
+    "node-dir": ">=0.0.0"
+  }
+}

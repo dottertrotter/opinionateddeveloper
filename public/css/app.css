@@ -1,0 +1,14 @@
+body{
+	/*background:url('../images/ricepaper_v3.png');*/
+}
+
+h1.logo{
+	font-family: 'Flamenco', cursive;
+	font-size:90px;
+}
+
+p{
+	font-family: 'Stint Ultra Expanded', cursive;
+	font-size:25px;	
+	line-height: 140%;
+}
