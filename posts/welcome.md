@@ -4,8 +4,8 @@ We've Got Opinions
 Working with smart people is in my opinion the single
 fastest way to improve as a developer.  
 
-Smart people tend engage in intelligent debate, 
-and if you're in earshot, you'll find you get absorb a 
+Smart people tend to engage in intelligent debate, 
+and if you're in earshot, you'll find that you get to absorb a 
 lot of wisdom just by listening to these.
 
 I work with smart people who take these debates to epic
