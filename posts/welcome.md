@@ -1,9 +1,20 @@
-A First Level Header
+We've Got Opinions
 ====================
 
-Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.
+Working with smart people is my opinion the single
+fastest way to improve as a developer.  
 
-The quick brown fox jumped over the lazy
-dog's back.
+Smart people tend engage in intelligent debate, 
+and if you're in earshot, you'll find you get absorb a 
+lot of wisdom just by listening to these.
+
+I work with smart people who take these debates to epic
+levels.  This blog is a tribute to those debates, the 
+opinions expressed and the people who express them.
+
+It's also an excuse to write a small blogging platform in node
+that will be contributed to by others using the pull request process.
+
+Enjoy.
+
+[@bbqhacker](https://twitter.com/Bbqhacker)
