@@ -7,11 +7,12 @@ var express = require('express'),
 var app = express();
 
 var posts = [];
+var tposts = [];
 
 dir.readFiles(__dirname + '/posts', {
     match: /.md$/,
     exclude: /^\./
-    }, function(err, content, filename,next) {
+    }, function(err, content, filename, next) {
         if (err) throw err;
         var fileInfo = fs.statSync(filename);
         posts.push({post:marked(content), date:fileInfo.ctime});
@@ -35,6 +36,10 @@ app.get('/', function(req, res){
 	res.render('index', { posts: posts });
 });
 
+app.get('/post/:name', function(req, res){
+	res.render('single', { post: posts[0] });
+});
+
 app.listen(3000);
 console.log('Listening on port 3000');
 
@@ -45,4 +50,6 @@ orderPosts = function(){
 		var d = new Date(b.date);
 		return c-d;
 	});
+
+	posts.reverse();
 }
