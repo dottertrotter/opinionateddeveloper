@@ -2,13 +2,16 @@ body{
 	/*background:url('../images/ricepaper_v3.png');*/
 }
 
-h1.logo{
-	font-family: 'Flamenco', cursive;
-	font-size:90px;
+h1, h2{
+	font-family: 'Vollkorn', serif;
 }
 
 p{
-	font-family: 'Stint Ultra Expanded', cursive;
-	font-size:25px;	
-	line-height: 140%;
+	font-family: 'PT Serif', serif;
+	font-size:16px;	
+	line-height: 1.8em;
+}
+
+.fa{
+	font-size:28px;
 }
