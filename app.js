@@ -39,7 +39,9 @@ app.get('/post/:name', function(req, res){
 	res.render('single', { post: posts[getPostNumber(req.params.name)] });
 });
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+
+app.listen(port);
 console.log('Listening on port 3000');
 
 /* Private Functions */
