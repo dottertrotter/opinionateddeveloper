@@ -7,7 +7,6 @@ var express = require('express'),
 var app = express();
 
 var posts = [];
-var tposts = [];
 
 dir.readFiles(__dirname + '/posts', {
     match: /.md$/,
@@ -15,7 +14,7 @@ dir.readFiles(__dirname + '/posts', {
     }, function(err, content, filename, next) {
         if (err) throw err;
         var fileInfo = fs.statSync(filename);
-        posts.push({post:marked(content), date:fileInfo.ctime});
+        posts.push({post:marked(content), date:fileInfo.ctime, name: getPostName(filename)});
         next();
     },
     function(err, files){
@@ -37,7 +36,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/post/:name', function(req, res){
-	res.render('single', { post: posts[0] });
+	res.render('single', { post: posts[getPostNumber(req.params.name)] });
 });
 
 app.listen(3000);
@@ -52,4 +51,19 @@ orderPosts = function(){
 	});
 
 	posts.reverse();
+}
+
+getPostNumber = function(postName){
+	for(i = 0; i < posts.length; i++){
+		if(posts[i].name == postName){
+			return i;
+		}
+	}
+	return -1;
+}
+
+getPostName = function(filename){
+	var pieces = filename.split("/");
+	var nameWithExt = pieces.slice(-1)[0];
+	return nameWithExt.split(".md")[0];
 }
