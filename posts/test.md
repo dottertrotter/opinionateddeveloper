@@ -1,4 +1,4 @@
-We've Got Opinions
+[This is a test](/post/test)
 ====================
 Test test.
 
