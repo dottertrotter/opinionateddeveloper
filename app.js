@@ -71,8 +71,7 @@ getFilename = function(filename){
 }
 
 getPostDate = function(filename){
-	var pieces = filename.split("/");
-	var nameWithExt = pieces.slice(-1)[0];
+	var nameWithExt = getFilename(filename);
 	var nameWithDate = nameWithExt.split(".md")[0];
 	var dateStart = nameWithDate.lastIndexOf("_");
 	var date = nameWithDate.substring((dateStart+1), nameWithDate.length);
@@ -81,8 +80,7 @@ getPostDate = function(filename){
 }
 
 getPostName = function(filename){
-	var pieces = filename.split("/");
-	var nameWithExt = pieces.slice(-1)[0];
+	var nameWithExt = getFilename(filename);
 	var nameWithDate = nameWithExt.split(".md")[0];
 	var dateStart = nameWithDate.lastIndexOf("_");
 	var name = nameWithDate.substring(0,dateStart);
