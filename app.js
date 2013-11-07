@@ -13,8 +13,7 @@ dir.readFiles(__dirname + '/posts', {
     exclude: /^\./
     }, function(err, content, filename, next) {
         if (err) throw err;
-        var fileInfo = fs.statSync(filename);
-        posts.push({post:marked(content), date:fileInfo.ctime, name: getPostName(filename)});
+        posts.push({post:marked(content), date:getPostDate(filename), name: getPostName(filename), filename:getFilename(filename)});
         next();
     },
     function(err, files){
@@ -64,8 +63,29 @@ getPostNumber = function(postName){
 	return -1;
 }
 
+getFilename = function(filename){
+	var pieces = filename.split("/");
+	var nameWithExt = pieces.slice(-1)[0];
+
+	return nameWithExt;
+}
+
+getPostDate = function(filename){
+	var pieces = filename.split("/");
+	var nameWithExt = pieces.slice(-1)[0];
+	var nameWithDate = nameWithExt.split(".md")[0];
+	var dateStart = nameWithDate.lastIndexOf("_");
+	var date = nameWithDate.substring((dateStart+1), nameWithDate.length);
+
+	return date;
+}
+
 getPostName = function(filename){
 	var pieces = filename.split("/");
 	var nameWithExt = pieces.slice(-1)[0];
-	return nameWithExt.split(".md")[0];
+	var nameWithDate = nameWithExt.split(".md")[0];
+	var dateStart = nameWithDate.lastIndexOf("_");
+	var name = nameWithDate.substring(0,dateStart);
+
+	return name;
 }
