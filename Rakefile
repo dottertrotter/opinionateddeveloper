@@ -2,7 +2,8 @@ require 'time'
 
 task :post, :post do |t, args|
 	now = Time.now.utc.iso8601()
-	File.open("posts/#{args['post']}_#{now}.md", "w+") do |file| 
+	name = args['post'].sub!(" ", "_")
+	File.open("posts/#{name}_#{now}.md", "w+") do |file| 
 		file.write("[Insert Title Here](/post/#{args['post']})\n====================\n\nPost content goes here.") 
 	end
 end
