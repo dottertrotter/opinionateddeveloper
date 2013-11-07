@@ -4,10 +4,11 @@ Opinionated Developer
 [OpinionatedDeveloper.com](http://www.opinionateddeveloper.com) is a blog dedicated to the argumentitive types that 
 I work with.
 
-If you want to submit a post, just do a pull request with a new markdown file added to posts directory.
+To create a new post, simply clone the repo.  Run "rake post['onewordpostname']" and a new markdown file with the proper name and date information will be created for you.
 
-To create the permalink, simply make the title of the post a link to post/name-of-post-markdown-file and the system will
-take care of the rest.
+This will also create a scaffolded post for you, with permalink included.
+
+When your ready to post it to the site, just do a pull request.  Simple as that.
 
 Enjoy.
 
