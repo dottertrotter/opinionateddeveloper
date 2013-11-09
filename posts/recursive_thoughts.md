@@ -23,7 +23,7 @@ the loops were all spelled out.
 then, came the method that called itself. it didn't look anything like a loop,
 just passing along what's left of the data to be handled by the next time this
 method was to be called, which was right now because i'm that method and i'm
-call it, which is to say me and... was it to be an endless loop that couldn't
+calling it, which is to say me and... was it to be an endless loop that couldn't
 be because of finite resources like a python swallowing its tail?
 
 relax... 
