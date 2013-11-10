@@ -1,4 +1,5 @@
-#... thinking in circles
+[thinking in circles](/post/recursive_thoughts)
+====================
 
 _programrun_ as it flows through the data executing commands based on
 decisionpoints mandated in its execution logic. many loops are terminated
@@ -33,8 +34,5 @@ recursion is somewhat poetic. the sleek and postmodern feel to code in which a
 method keeps calling itself until some point at which it exits, the depth to
 which is not known to the developer. instead, if the data given are still
 open to processing, then we let _the_
-
-
-
 
 [@bikeonastick](https://twitter.com/bikeonastick)
