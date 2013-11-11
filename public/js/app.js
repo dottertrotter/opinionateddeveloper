@@ -4,7 +4,7 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  //$routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/'});
+  $routeProvider.when('/posts', {templateUrl: 'partials/posts.html', controller: 'Posts'});
+  $routeProvider.when('/post/:name', {templateUrl: 'partials/post.html', controller: 'Post'});
+  $routeProvider.otherwise({redirectTo: '/posts'});
 }]);

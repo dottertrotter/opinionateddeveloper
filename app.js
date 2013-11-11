@@ -39,7 +39,7 @@ app.get('/post-list', function(req, res){
 });
 
 app.get('/post/:name', function(req, res){
-	res.render('single', { post: posts[getPostNumber(req.params.name)] });
+	res.json(posts[getPostNumber(req.params.name)])
 });
 
 var port = process.env.PORT || 3000;

@@ -1,7 +1,7 @@
 angular.module('myApp.controllers', []).
-  controller('MyCtrl1', ['$scope', '$http', '$sce',
-  	function($scope, $http, $sce) {
-	  	$http.get("/post-list", {})
+controller('Posts', ['$scope', '$http', '$sce',
+	function($scope, $http, $sce) {
+		$http.get("/post-list", {})
 		.success(function(data, status, headers, config) {
 			//console.log(data);
 			for(var i = 0; i < data.length; i++){
@@ -11,7 +11,11 @@ angular.module('myApp.controllers', []).
 		}).error(function(data, status, headers, config) {
 			console.log('failed');
 		});
-	}])
-  .controller('MyCtrl2', [function() {
-
-  }]);
+}])
+.controller('Post', ['$scope', '$routeParams', '$http', '$sce',
+	function($scope, $routeParams, $http, $sce) {
+		$http.get('post/' + $routeParams.name).success(function(data) {
+	      data.post = $sce.trustAsHtml(data.post);
+	      $scope.post = data;
+	    });
+	}]);
