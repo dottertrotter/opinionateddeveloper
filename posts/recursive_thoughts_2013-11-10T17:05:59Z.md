@@ -1,4 +1,4 @@
-[thinking in circles](/post/recursive_thoughts)
+[thinking in circles](#/post/recursive_thoughts)
 ====================
 
 _programrun_ as it flows through the data executing commands based on

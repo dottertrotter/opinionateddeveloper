@@ -31,11 +31,15 @@ app.configure(function() {
 });
 
 app.get('/', function(req, res){
-	res.render('index', { posts: posts });
+	res.render('index', {});
+});
+
+app.get('/post-list', function(req, res){
+	res.json(posts)
 });
 
 app.get('/post/:name', function(req, res){
-	res.render('single', { post: posts[getPostNumber(req.params.name)] });
+	res.json(posts[getPostNumber(req.params.name)])
 });
 
 var port = process.env.PORT || 3000;
