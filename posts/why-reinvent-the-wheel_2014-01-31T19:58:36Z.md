@@ -1,0 +1,8 @@
+[Why Reinvent The Wheel](/post/why-reinvent-the-wheel)
+====================
+
+Most developers will tell you it's best not to reinvent the wheel. What they really mean is try and use existing code that's been written by other developers (probably with more experience than you) to accomplish your goal. For the most part that's a great idea. Especially if you're a less experienced developer. Pick a framework or library, learn it, and build great and wonderful things. That should work most of the time. It saves a bunch of time standing on the shoulders of giants and in general that's what you should do.
+
+Sometimes though it's actually not a bad idea to reinvent the wheel. There's a large amount of learning that comes from doing things from scratch. That's usually how we all learn in the very beginning. We all write some sort of "Hello World" application, the same one everyone else has written before. But what about doing that for something bigger? You might have your favorite MVC framework or JavaScript library to do this or that but you're probably not using all of the features and unless you've spent time troubleshooting something you probably haven't spent much time under the covers to figure out what's really going on. Perhaps it's time to build it yourself. Yup. Build an MVC or whatever from scratch. At first this may sound like a daunting task, and it very well might be. The up side is that you'll be in full control over all of the decisions and become much more aware of the decisions that were made in other frameworks which should help you evaluate anything you encounter in the future much better. And who knows, you might actually write something that's useful.
+
+[@aaronhanson](https://twitter.com/aaronhanson)
